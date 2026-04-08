@@ -1,0 +1,24 @@
+name: Mon Premier CI
+# 1. Déclencheur
+on: [push]
+
+# 2. Liste des tâches
+jobs:
+  build-and-test:
+    # Utilise une machine virtuelle Ubuntu
+    runs-on: ubuntu-latest
+
+    steps:
+      # Étape 1 : Récupérer le code du dépôt
+      - name: Checkout du code
+        uses: actions/checkout@v4
+
+      # Étape 2 : Simuler une installation
+      - name: Installation des dépendances
+        run: echo "Installation des outils en cours..."
+
+      # Étape 3 : Exécuter un test factice
+      - name: Lancement des tests
+        run: |
+          echo "Exécution des tests unitaires..."
+          exit 0
